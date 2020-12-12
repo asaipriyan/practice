@@ -1,0 +1,38 @@
+body{
+    animation: anim 10s infinite;
+}
+
+.data-text{
+    font-family: 'Source Sans Pro',sans-serif;
+    font-size: 20px;    
+    width: 50%;
+    text-align: justify;
+    margin: 150px auto;
+}
+
+#author{
+    font-size: 16px;
+    font-weight: lighter;
+}
+
+@keyframes anim{
+    0% {
+        background: #2eb266;
+    }
+    20%{
+        background: #6e8898;
+    }
+    40%{
+        background: #9fb1bc;
+    }
+    60%{
+        background: #d3d0cb;
+    }
+    80%{
+        background: #e2c044;
+    }
+    100%{
+        background: #0ca98a;
+    }
+
+}
