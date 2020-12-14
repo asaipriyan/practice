@@ -5,6 +5,7 @@
 
 body{
     font-family: 'Source Sans Pro', sans-serif;
+    background: #bababa;
 }
 
 #sidebar{
@@ -39,4 +40,11 @@ body{
     background: #000;
     display: block;
     margin-top: 4px;
+}
+header {
+    left: 30%;
+    top:30%;
+    font-size: 40px;
+    position: absolute;
+    width: 500px;
 }
