@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll animation</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="//db.onlinewebfonts.com/c/55d433372d270829c51e2577a78ef12d?family=Monument+Extended" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <div class="content">
+        <section class="distort">
+            <div>
+                <img src="/images/img1.jpg" alt="">
+                <h1>Boundary Supply</h1>
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+            </div>
+            <div>
+                <img src="/images/img2.jpg" alt="">
+                <h1>Loopy Supply</h1>
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+            </div>
+            <div>
+                <img src="/images/img3.jpg" alt="">
+                <h1>Round Supply</h1>
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+            </div>
+            <div>
+                <img src="/images/img4.jpg" alt="">
+                <h1>Runway Supply</h1>
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+            </div>
+        </section>
+    </div>
+    <script>
+        const content = document.querySelector("section");
+        let curerentPos = window.pageYOffset;
+        
+        console.log("dasdjak")
+        const callDistort = function(){
+            const newPos = window.pageYOffset;
+            const diff = newPos -curerentPos;
+            const speed = diff * 0.5;
+            
+            content.style.transform ="skewY("+speed+"deg)";
+            curerentPos = newPos;
+            requestAnimationFrame(callDistort);
+        }
+
+        callDistort();
+    </script>
+</body>
+</html>

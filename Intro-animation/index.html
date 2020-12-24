@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro text</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="//db.onlinewebfonts.com/c/55d433372d270829c51e2577a78ef12d?family=Monument+Extended" rel="stylesheet" type="text/css"/>
+
+</head>
+<body>
+    <div class="header">monika santucci </div>
+    <div class="container">
+        <div class="text-wrapper">
+            <div class="text-1 text"> monika santucci</div>
+            <div class="text-2 text"> monika santucci</div>
+            <div class="text-3 text"> monika santucci</div>
+            <div class="text-4 text"> monika santucci</div>
+            <div class="text-5 text"> monika santucci</div>
+            <div class="text-6 text"> monika santucci</div>
+            <div class="text-7 text"> monika santucci</div>
+            <div class="text-8 text"> monika santucci</div>
+            <div class="text-9 text"> monika santucci</div>
+            <div class="text-10 text"> monika santucci</div>
+            <div class="text-11 text"> monika santucci</div>
+        </div>
+    </div>
+</body>
+<script>
+    document.body.style.cursor ="none";
+    const cursor = document.createElement("div");
+    cursor.classList.add("cursor");
+    document.body.appendChild(cursor);
+
+    const follow = document.createElement("div");
+    follow.classList.add("follow");
+    document.body.appendChild(follow);
+
+    function move(obj,event){
+        obj.style ="";
+        obj.style.top = event.clientY + "px";
+        obj.style.left =event.clientX + "px";
+    }
+
+    if(cursor){
+        window.addEventListener("mousemove",function(event){
+            var e =event;
+            var t = e.target;
+            var f = follow;
+            var c = cursor;
+
+            if(t.tagName == "A"){
+                c.style.backgroundColor = "transparent";
+
+                f.style.top = t.offsetTop +"px";
+                f.style.left = t.offsetLeft + "px";
+                f.style.width = t.clientWidth + "px";
+                f.style.height = t.clientHeight + "px";
+            }else{
+                move(c,e);
+                move(f,e);
+                f.classList.remove("on-focus")
+            }
+        })
+    }
+
+</script>
+</html>
